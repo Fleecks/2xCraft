@@ -1,0 +1,95 @@
+* { box-sizing: border-box }
+
+body {
+	background: #44f;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background: #eef;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.content__top {
+	width: 100%;
+	top: 0;
+	position: absolute;
+	padding: 10px;
+}
+
+.content__main {
+	width: 100%;
+	top: 75px;
+	bottom: 75px;
+	position: absolute;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.content__bottom {
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	padding: 10px;
+}
+
+input[type="file"],
+input[type="file"]:focus,
+input[type="file"]:hover { display: none }
+
+.skin_upload-btn {
+	color: #55f;
+	width: 100%;
+	height: 55px;
+	font-family: "Mulish", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 6px 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	border: 2px dashed #55f;
+}
+
+.skin_save-btn {
+	background: #44f;
+	color: #fff;
+	width: 100%;
+	height: 55px;
+	font-family: "Mulish", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	border: 0;
+	border-radius: 10px;
+}
+.skin_save-btn[disabled] {
+	background: #88d;
+}
+
+#skin_viewer {
+	width: 100%;
+	height: 100%;
+	bordecr: 1px solid black;
+	position: absolute;
+}
+
+/* Адаптація */
+
+@media (min-width:512px) {
+	.container {
+		width: 480px;
+		height: 720px;
+		border-radius: 12px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		box-shadow: 0 0 100px -20px rgb(0 0 0/.4)
+	}
+}
